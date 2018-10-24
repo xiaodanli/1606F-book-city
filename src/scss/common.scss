@@ -1,0 +1,231 @@
+@import './_reset.scss';
+@import './_mixin.scss';
+@import './_config.scss';
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+
+.wrap{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    width:100%;
+    height: pxTorem(44px);
+    background-color: $header-bg;
+    border-bottom:1px solid $header-line-bg;
+    position: relative;
+    .icon-sign{
+        width:pxTorem(44px);
+        height:pxTorem(44px);
+        @include bg('../imgs/icon-sign.png');
+        background-size:pxTorem(20px) pxTorem(20px);
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    .icon-person{
+        width:pxTorem(44px);
+        height:pxTorem(44px);
+        @include bg('../imgs/icon-person.png');
+        background-size:pxTorem(20px) pxTorem(20px);
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    .icon-back{
+        width:pxTorem(44px);
+        height:pxTorem(44px);
+        @include bg('../imgs/icon-back.png');
+        background-size:pxTorem(20px) pxTorem(20px);
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    .book-name{
+        padding-left:pxTorem(44px);
+        line-height: pxTorem(44px);
+        font-size:pxTorem($fz14);
+    }
+    .tab-list{
+        width:pxTorem(120px);
+        height:pxTorem(44px);
+        line-height: pxTorem(44px);
+        margin:0 auto;
+        display: flex;
+        position: relative;
+        .tab-item{
+            flex:1;
+            text-align: center;
+            font-size:pxTorem($fz14);
+            &.active{
+                color:$tab-active-color;
+            }
+        }
+        .line{
+            width:pxTorem(60px);
+            height:pxTorem(2px);
+            position: absolute;
+            bottom:0;
+            left:0;
+            transition:transform .5s;
+            &:after{
+                content:'';
+                width:50%;
+                height:pxTorem(2px);
+                display: block;
+                margin:0 auto;
+                background: $tab-active-color;
+            }
+            &.active{
+                transform: translateX(pxTorem(60px));
+            }
+        }
+    }
+
+    .search{
+        height:pxTorem(34px);
+        margin:pxTorem(5px) pxTorem(20px) pxTorem(5px) pxTorem(44px);
+        background: $write-color;
+        display: flex;
+    }
+    .icon-search{
+        width:pxTorem(34px);
+        height:pxTorem(34px);
+        @include bg('../imgs/icon-search.png');
+        background-size:pxTorem(20px) pxTorem(20px);
+        border-right:1px solid $border-color;
+    }
+    input{
+        flex:1;
+        height: 100%;
+        padding:0 pxTorem(10px);
+    }
+    .search-btn{
+        width:pxTorem(44px);
+        height:pxTorem(34px);
+        text-align: center;
+        line-height: pxTorem(34px);
+        border-left:1px solid $border-color;
+    }
+}
+
+.content{
+    width:100%;
+    flex:1;
+    overflow: hidden;
+    .block{
+        width:100%;
+        border-bottom:pxTorem(10px) solid $line-border;
+        background: $write-color;
+    }
+    .title{
+        width:100%;
+        height:pxTorem(44px);
+        font-size:pxTorem(20px);
+        line-height: pxTorem(44px);
+        border-bottom:1px solid $border-color;
+        border-left:pxTorem(6px) solid red;
+        padding-left:pxTorem(10px);
+    }
+}
+
+.list-t-b{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    a{
+        width:33.3%;
+        display: block;
+        dl{
+            width:100%;
+            margin-top:pxTorem(10px);
+            dt{
+                width:pxTorem(80px);
+                height: pxTorem(120px);
+                margin:0 auto;
+                overflow: hidden;
+                img{
+                    width:100%;
+                    height:auto;
+                }
+            }
+            dd{
+                text-align: center;
+            }
+        }
+    }
+}
+
+.list-l-r{
+    padding:pxTorem(15px);
+    box-sizing: border-box;
+    dl{
+        width:100%;
+        display: flex;
+        dt{
+            width:pxTorem(80px);
+            height: pxTorem(120px);
+            overflow: hidden;
+            margin-right:pxTorem(10px);
+            flex-shrink: 0;
+            position: relative;
+            .order{
+                position: absolute;
+                top:0;
+                left:10px;
+                color:green;
+            }
+        }
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+
+}
+
+.tag-list{
+    .tag-item{
+        border:1px solid $free-green-color;
+
+        color:$green-color;
+
+        border-radius: 4px;
+        font-size:pxTorem(12px);
+        display: inline;
+        padding:pxTorem(2px);
+        margin:0 pxTorem(4px);
+    }
+}
+
+.type-list{
+    margin:pxTorem(15px);
+    box-sizing: border-box;
+    li{
+        display: inline-block;
+        border-radius: pxTorem(4px);
+        padding:pxTorem(2px) pxTorem(4px);
+        border:1px solid $border-color;
+        margin-right:pxTorem(10px);
+        &:nth-child(3n){
+            background: $tag-bg1;
+        }
+        &:nth-child(3n+1){
+            background: $tag-bg2;
+        }
+        &:nth-child(3n+2){
+            background: $tag-bg3;
+        }
+    }
+    
+}
+
+

@@ -1,0 +1,209 @@
+@import './_mixin.scss';
+@import './_config.scss';
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+
+.wrap{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+
+.content{
+    width:100%;
+    height:100%;
+    overflow: scroll;
+    padding:pxTorem(15px);
+    box-sizing: border-box;
+    background: $article-bg1;
+    font-size:pxTorem(12px);
+    h1{
+        font-size:pxTorem(18px);
+        color:$title-color;
+        font-weight: bold;
+        border-bottom:1px solid $title-color;
+        line-height: pxTorem(44px);
+        margin-bottom:pxTorem(10px);
+    }
+
+    p{
+        color:$artical-color;
+        line-height: 1.5;
+        text-indent: 2em;
+    }
+}
+
+.set-wrap{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    display: none;
+    &>div{
+        width:100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .set-t{
+        width:100%;
+        height: pxTorem(44px);
+        background: rgba(0,0,0,.8);
+        position: relative;
+        color:$write-color;
+        font-size:pxTorem(14px);
+        padding-left:pxTorem(44px);
+        box-sizing: border-box;
+        line-height: pxTorem(44px);
+        .icon-circal-back{
+            width:pxTorem(44px);
+            height:pxTorem(44px);
+            @include bg('../imgs/icon-circle-back.png');
+            background-size:pxTorem(20px);
+            position: absolute;
+            top:0;
+            left:0;
+        }
+    }
+
+    .mask{
+        width:100%;
+        flex:1;
+        background: transparent;
+    }
+
+    .set-b{
+        width:100%;
+        background: rgba(0,0,0,.8);
+        color:$write-color;
+        font-size:pxTorem(14px);
+        .set-artical{
+            display: flex;
+            justify-content:space-around;
+            line-height: pxTorem(44px);
+            border-bottom:1px solid $write-color;
+        }
+        .set-btns{
+            display: flex;
+            justify-content:space-around;
+            dt{
+                width:pxTorem(44px);
+                height:pxTorem(44px);
+                margin:0 auto;
+                @include bg('../imgs/icon-chapter.png');
+                background-size:pxTorem(20px);
+            }
+            dd{
+                text-align:center;
+            }
+            .set-style{
+                dt{
+                    @include bg('../imgs/icon-font.png');
+                    background-size:pxTorem(20px);
+                }
+                &.active{
+                    dt{
+                        @include bg('../imgs/icon-font-active.png');
+                        background-size:pxTorem(20px);
+                    }
+                }
+            }
+            .day-btn{
+                dt{
+                    @include bg('../imgs/icon-night.png');
+                    background-size:pxTorem(20px);
+                }
+                &.light{
+                    dt{
+                        @include bg('../imgs/icon-light.png');
+                        background-size:pxTorem(20px);
+                    }
+                }
+            }
+            .down-btn{
+                dt{
+                    @include bg('../imgs/icon-down.png');
+                    background-size:pxTorem(20px);
+                }
+            }
+        }
+    }
+
+}
+
+.set-panel{
+    width:100%;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    bottom:pxTorem(60px);
+    left:0;
+    z-index:6;
+    display: none;
+    &>div{
+        display: flex;
+        align-items: center;
+        margin:pxTorem(10px) 0;
+        span{
+            width:pxTorem(80px);
+            color:$write-color;
+            text-align: center;
+            font-size:pxTorem(14px);
+         }
+         .btns{
+             display: flex;
+             align-items: center;
+        }
+        button{
+            width:pxTorem(100px);
+            height: pxTorem(30px);
+            background: transparent;
+            border-radius: pxTorem(6px);
+            color:$write-color;
+            margin-right:pxTorem(10px);
+        }
+        ul{
+            li{
+                width:pxTorem(30px);
+                height: pxTorem(30px);
+                border-radius: 50%;
+                background: $article-bg1;
+                margin-right:pxTorem(10px);
+                display: inline-block;
+                position: relative;
+                &.active:before{
+                    content:'';
+                    width:pxTorem(34px);
+                    height: pxTorem(34px);
+                    display: block;
+                    border-radius: 50%;
+                    border:1px solid red;
+                    position: absolute;
+                    top:50%;
+                    left:50%;
+                    transform: translate3d(-50%,-50%,0);
+                }   
+                &:nth-child(2){
+                    background: $article-bg2;
+                }
+                &:nth-child(3){
+                    background: $article-bg3;
+                }
+                &:nth-child(4){
+                    background: $article-bg4;
+                }
+                &:nth-child(5){
+                    background: $article-bg5;
+                }
+                &:nth-child(6){
+                    background: $article-bg6;
+                }
+            }
+        }
+    }
+}

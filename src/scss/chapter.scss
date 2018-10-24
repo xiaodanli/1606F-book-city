@@ -1,0 +1,17 @@
+@import './_mixin.scss';
+@import './_config.scss';
+
+.chapter-list{
+    width:100%;
+    flex:1;
+    overflow: hidden;
+    ul{
+        li{
+            width:100%;
+            height: pxTorem(44px);
+            line-height: pxTorem(44px);
+            border-bottom:1px solid $border-color;
+            font-size:pxTorem(14px);
+        }
+    }
+}

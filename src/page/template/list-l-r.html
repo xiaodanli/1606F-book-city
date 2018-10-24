@@ -1,0 +1,20 @@
+<script type="text/x-handlebars-template" id="lr-tpl">
+    {{#each this}}
+    <dl>
+        <dt>
+            <img src="{{cover}}" alt="">
+            <div class="order">{{addIndex @index}}</div>
+        </dt>
+        <dd>
+            <h3>{{title}}</h3>
+            <span class="author">{{authors}}</span>
+            <p class="intro">{{summary}}</p>
+            <ul class="tag-list">
+                {{#each tags}}
+                <li class="tag-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </dd>
+    </dl>
+    {{/each}}
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <span class="icon-back"></span>
+            <div class="search">
+                <span class="icon-search"></span>
+                <input type="text" placeholder="请输入书名或关键词" id="key">
+                <span class="search-btn">搜索</span>
+            </div>
+        </header>
+        <div class="content">
+            <div class="keys">
+                <h2>热门搜索关键词</h2>
+                <ul class="type-list hot"></ul>
+                <h2>历史搜索关键词</h2>
+                <ul class="type-list history"></ul>
+            </div>
+
+            <!-- 
+
+                [
+                    {ad_name:''},
+                    {ad_name:''},
+                    {ad_name:''}
+                ]
+
+             -->
+            <div class="search-result"></div>  
+            <script type="text/x-handlebars-template" id="type-tpl">
+                {{#each this}}
+                <li>{{ad_name}}</li>
+                {{/each}}
+            </script> 
+            <script type="text/x-handlebars-template" id="search-tpl">
+                {{#each this}}
+                <dl>
+                    <dt>
+                        <img src="{{cover}}" alt="">
+                    </dt>
+                    <dd>
+                        <span class="name">{{title}}</span>
+                        <span class="intro">{{intro}}</span>
+                    </dd>
+                </dl>
+                {{/each}}
+            </script> 
+        </div>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'],function(){
+            require(['search'])
+        })
+    </script>
+</body>
+</html>

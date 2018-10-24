@@ -1,0 +1,155 @@
+@import './_reset.scss';
+@import './_mixin.scss';
+@import './_config.scss';
+
+.index-wrap{
+    .swiper-wrap{
+        width:100%;
+        height:100%;
+    }
+    .book-city-con{
+        position: relative;
+        &:after{
+            content:attr(down);
+            width:100%;
+            height:pxTorem(44px);
+            position: absolute;
+            top:pxTorem(-44px);
+            left:0;
+            background: red;
+            text-align: center;
+            line-height: pxTorem(44px);
+        }
+        &:before{
+            content:attr(up);
+            width:100%;
+            height:pxTorem(44px);
+            position: absolute;
+            bottom:pxTorem(-44px);
+            left:0;
+            background: red;
+            text-align: center;
+            line-height: pxTorem(44px);
+        }
+    }
+}
+.search-wrap{
+    padding:pxTorem(15px);
+    display: flex;
+    .not-search{
+        flex:1;
+        height: pxTorem(40px);
+        border:1px solid $border-color;
+        border-radius: 6px;
+        font-size:pxTorem($fz12);
+        @include bg('../imgs/icon-search.png',pxTorem(15px));
+        background-size:pxTorem(18px) pxTorem(18px) ;
+        padding-left:pxTorem(48px);
+        line-height:pxTorem(40px);
+    }
+    .switch-btn{
+        width:pxTorem(40px);
+        height:pxTorem(40px);
+        border:1px solid $border-color;
+        border-radius: 6px;
+        @include bg('../imgs/icon-switch.png');
+        background-size:pxTorem(18px) pxTorem(18px);
+        margin-left:pxTorem(15px);
+        &.active{
+            @include bg('../imgs/icon-switch-list.png');
+            background-size:pxTorem(18px) pxTorem(18px);
+        }
+    }
+}
+
+.banner{
+    width:100%;
+    overflow: hidden;
+    img{
+        width:100%;
+    }
+}
+
+.classify{
+    width:100%;
+    display:flex;
+    dl{
+        width:20%;
+        text-align: center;
+        margin:pxTorem(10px) 0;
+        dt{
+            width:pxTorem(40px);
+            height:pxTorem(40px);
+            border-radius: 50%;
+            margin:0 auto;
+            overflow: hidden;
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+        dd{
+            text-align: center;
+        }
+    }
+}
+
+.recommend-tit{
+    width:100%;
+    height:pxTorem(44px);
+    font-size:pxTorem($fz14);
+    line-height: pxTorem(44px);
+    border-bottom:1px solid $border-color;
+    padding-left:pxTorem(10px);
+    font-weight: bold;
+}
+
+.list{
+    width:100%;
+    li{
+        width:100%;
+        height:pxTorem(44px);
+        line-height: pxTorem(44px);
+        border-bottom:1px solid gray;
+        padding-left:pxTorem(15px);
+        box-sizing: border-box;
+    }   
+}
+
+.shelf-list{
+    padding:pxTorem(15px);
+    dl{
+        width:100%;
+        display: flex;
+        dt{
+            width:pxTorem(80px);
+            height: pxTorem(120px);
+            overflow: hidden;
+            margin-right:pxTorem(10px);
+        }
+        img{
+            width:100%;
+            height:auto;
+        }
+        span{
+            display: block;
+        }
+    }
+    &.list{
+        display: flex;
+        flex-wrap: wrap;
+        dl{
+            flex-direction: column;
+            width:33.3%;
+            .author,.new{
+                display: none;
+            }
+        }
+    }
+}
+
+.change-btn{
+    width:100%;
+    height: pxTorem(44px);
+    line-height: pxTorem(44px);
+}

@@ -1,0 +1,43 @@
+<script type="text/x-handlebars-template" id="banner-tpl">
+    {{#each this}}
+    <div class="swiper-slide">
+        <img src="{{ad_pic_url}}" alt="">
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/x-handlebars-template" id="classify-tpl">
+    {{#each this}}
+    <dl>
+        <dt>
+            <img src="{{ad_copy}}" alt="">
+        </dt>
+        <dd>{{ad_name}}</dd>
+    </dl>
+    {{/each}}
+</script>
+
+<script type="text/x-handlebars-template" id="recommend-tpl">
+    {{#each this}}
+        {{#unless @index}}
+        <dl>
+            <dt>
+                <img src="{{cover}}" alt="">
+                <div class="order">{{addIndex @index}}</div>
+            </dt>
+            <dd>
+                <h3>{{title}}</h3>
+                <span class="author">{{authors}}</span>
+                <p class="intro">{{summary}}</p>
+                <ul class="tag-list">
+                    {{#each tags}}
+                    <li class="tag-item">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </dd>
+        </dl>
+        {{else}}
+        <li>{{addIndex @index}}{{title}}</li>
+        {{/unless}}
+    {{/each}}
+</script>

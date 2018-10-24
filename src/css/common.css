@@ -1,0 +1,375 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font-family: STHeitiSC-Light;
+  font: inherit;
+  vertical-align: baseline; }
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  font-family: arial, sans-serif; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+ins,
+a {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  display: inline-block; }
+
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none; }
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+  -o-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px; }
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+
+.header {
+  width: 100%;
+  height: 1.17333rem;
+  background-color: #efeff0;
+  border-bottom: 1px solid #777;
+  position: relative; }
+  .header .icon-sign {
+    width: 1.17333rem;
+    height: 1.17333rem;
+    background: url("../imgs/icon-sign.png") no-repeat center center;
+    background-size: 0.53333rem 0.53333rem;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .header .icon-person {
+    width: 1.17333rem;
+    height: 1.17333rem;
+    background: url("../imgs/icon-person.png") no-repeat center center;
+    background-size: 0.53333rem 0.53333rem;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .header .icon-back {
+    width: 1.17333rem;
+    height: 1.17333rem;
+    background: url("../imgs/icon-back.png") no-repeat center center;
+    background-size: 0.53333rem 0.53333rem;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .header .book-name {
+    padding-left: 1.17333rem;
+    line-height: 1.17333rem;
+    font-size: 0.37333rem; }
+  .header .tab-list {
+    width: 3.2rem;
+    height: 1.17333rem;
+    line-height: 1.17333rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative; }
+    .header .tab-list .tab-item {
+      flex: 1;
+      text-align: center;
+      font-size: 0.37333rem; }
+      .header .tab-list .tab-item.active {
+        color: #ff6600; }
+    .header .tab-list .line {
+      width: 1.6rem;
+      height: 0.05333rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: transform .5s; }
+      .header .tab-list .line:after {
+        content: '';
+        width: 50%;
+        height: 0.05333rem;
+        display: block;
+        margin: 0 auto;
+        background: #ff6600; }
+      .header .tab-list .line.active {
+        transform: translateX(1.6rem); }
+  .header .search {
+    height: 0.90667rem;
+    margin: 0.13333rem 0.53333rem 0.13333rem 1.17333rem;
+    background: #fff;
+    display: flex; }
+  .header .icon-search {
+    width: 0.90667rem;
+    height: 0.90667rem;
+    background: url("../imgs/icon-search.png") no-repeat center center;
+    background-size: 0.53333rem 0.53333rem;
+    border-right: 1px solid #ddd; }
+  .header input {
+    flex: 1;
+    height: 100%;
+    padding: 0 0.26667rem; }
+  .header .search-btn {
+    width: 1.17333rem;
+    height: 0.90667rem;
+    text-align: center;
+    line-height: 0.90667rem;
+    border-left: 1px solid #ddd; }
+
+.content {
+  width: 100%;
+  flex: 1;
+  overflow: hidden; }
+  .content .block {
+    width: 100%;
+    border-bottom: 0.26667rem solid #f0f0f0;
+    background: #fff; }
+  .content .title {
+    width: 100%;
+    height: 1.17333rem;
+    font-size: 0.53333rem;
+    line-height: 1.17333rem;
+    border-bottom: 1px solid #ddd;
+    border-left: 0.16rem solid red;
+    padding-left: 0.26667rem; }
+
+.list-t-b {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+  .list-t-b a {
+    width: 33.3%;
+    display: block; }
+    .list-t-b a dl {
+      width: 100%;
+      margin-top: 0.26667rem; }
+      .list-t-b a dl dt {
+        width: 2.13333rem;
+        height: 3.2rem;
+        margin: 0 auto;
+        overflow: hidden; }
+        .list-t-b a dl dt img {
+          width: 100%;
+          height: auto; }
+      .list-t-b a dl dd {
+        text-align: center; }
+
+.list-l-r {
+  padding: 0.4rem;
+  box-sizing: border-box; }
+  .list-l-r dl {
+    width: 100%;
+    display: flex; }
+    .list-l-r dl dt {
+      width: 2.13333rem;
+      height: 3.2rem;
+      overflow: hidden;
+      margin-right: 0.26667rem;
+      flex-shrink: 0;
+      position: relative; }
+      .list-l-r dl dt .order {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        color: green; }
+    .list-l-r dl img {
+      width: 100%;
+      height: auto; }
+
+.tag-list .tag-item {
+  border: 1px solid #49ab3f;
+  color: #53ac7d;
+  border-radius: 4px;
+  font-size: 0.32rem;
+  display: inline;
+  padding: 0.05333rem;
+  margin: 0 0.10667rem; }
+
+.type-list {
+  margin: 0.4rem;
+  box-sizing: border-box; }
+  .type-list li {
+    display: inline-block;
+    border-radius: 0.10667rem;
+    padding: 0.05333rem 0.10667rem;
+    border: 1px solid #ddd;
+    margin-right: 0.26667rem; }
+    .type-list li:nth-child(3n) {
+      background: #fbebe8; }
+    .type-list li:nth-child(3n+1) {
+      background: #fcedda; }
+    .type-list li:nth-child(3n+2) {
+      background: #e8f9db; }

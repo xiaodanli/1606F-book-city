@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <span class="icon-back"></span>
+            <h2 class="book-name">书名</h2>
+        </header>
+        <!-- 内容 -->
+        <div class="content">
+            <div class="inner-content"></div>
+
+            <!-- 作者的其他书籍 -->
+            <div class="block">
+                <h2>作者的其他书籍</h2>
+                <ul class="list-t-b other"></ul>
+            </div>
+        </div>
+        <script type="text/x-handlebars-template" id="detail-tpl">
+            <!-- 书的内容 -->
+            <div class="block">
+                <dl class="book-info">
+                    <dt>
+                        <img src="{{cover}}" alt="">
+                    </dt>
+                    <dd>
+                        <span>{{title}}</span>
+                        <span class="authors">{{authors}}</span>
+                        <span class="prize">评价:{{score_count}}</span>
+                        <span class="price">价格：{{price}}</span>
+                        <span class="num">{{word_count}}连载</span>
+                    </dd>
+                </dl>
+                <div class="btns">
+                    <button class="go-artical-btn">开始阅读</button>
+                    <button class="down-btn">下载</button>
+                </div>
+                <p class="intro">{{content}}</p>
+                <a href="../page/chapter.html?fiction_id={{fiction_id}}" class="go-chapter-btn">
+                    {{latest}}
+                </a>
+            </div>
+            <!-- 类别标签 -->
+            <div class="block">
+                <h2>类别标签</h2>
+                <ul class="type-list">
+                    {{#each tags}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </script>
+        
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'],function(){
+            require(['detail'])
+        })
+    </script>
+</body>
+</html>

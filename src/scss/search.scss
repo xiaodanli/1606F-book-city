@@ -1,0 +1,35 @@
+@import './mixin.scss';
+@import './config.scss';
+.keys{
+    display: block;
+}
+
+.search-result{
+    width:100%;
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    display:none;
+    dl{
+        margin:pxTorem(15px);
+        box-sizing: border-box;
+        display: flex;
+        border-bottom:1px solid $border-color;
+        dt{
+            width:pxTorem(80px);
+            height:pxTorem(100px);
+            margin-right:pxTorem(10px);
+            flex-shrink: 0;
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+
+        dd{
+            span{
+                display: block;
+            }
+        }
+    }
+}

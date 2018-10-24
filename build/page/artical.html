@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/artical.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="content"></div>
+        <script type="text/x-handlebars-template" id="content-tpl">
+            <h1>{{t}}</h1>
+            {{#each p}}
+            <p>{{this}}</p>
+            {{/each}}
+        </script>
+        <div class="set-wrap">
+            <div>
+                <div class="set-t">
+                    <span class="icon-circal-back"></span>返回
+                </div>
+                <div class="mask"></div>
+                <div class="set-b">
+                    <div class="set-artical">
+                        <span class="prev-btn">上一章</span>
+                        <span><i class="cur">1</i>/<i class="total">66</i></span>
+                        <span class="next-btn">下一章</span>
+                    </div>
+                    <div class="set-btns">
+                        <dl class="go-chapter">
+                            <dt></dt>
+                            <dd>目录</dd>
+                        </dl>
+                        <dl class="set-style">
+                            <dt></dt>
+                            <dd>字体</dd>
+                        </dl>
+                        <dl class="day-btn">
+                            <dt></dt>
+                            <dd>夜间</dd>
+                        </dl>
+                        <dl class="down-btn">
+                            <dt></dt>
+                            <dd>下载</dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- 设置面板 -->
+                <div class="set-panel">
+                    <div>
+                        <span>字号</span>
+                        <div class="btns">
+                            <button class="big-btn">大</button>
+                            <button class="small-btn">小</button>
+                        </div>
+                    </div>
+                    <div>
+                        <span>背景</span>
+                        <ul class="bgs">
+                            <li class="active" data-bg="#f7eee5"></li>
+                            <li data-bg="#e9dfc7"></li>
+                            <li data-bg="#a4a4a4"></li>
+                            <li data-bg="#cdefce"></li>
+                            <li data-bg="#283548"></li>
+                            <li data-bg="#0f1410"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'],function(){
+            require(['artical'])
+        })
+    </script>
+</body>
+</html>

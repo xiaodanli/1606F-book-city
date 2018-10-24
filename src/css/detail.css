@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px; }
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+.book-info {
+  margin: 0.4rem;
+  box-sizing: border-box;
+  display: flex; }
+  .book-info dt {
+    width: 2.13333rem;
+    height: 3.2rem;
+    margin-right: 0.4rem; }
+    .book-info dt img {
+      width: 100%;
+      height: 100%; }
+  .book-info span {
+    display: block; }
+
+.btns {
+  margin: 0.4rem;
+  box-sizing: border-box;
+  display: flex; }
+  .btns button {
+    flex: 1;
+    height: 0.8rem;
+    font-size: 0.37333rem;
+    border-radius: 0.16rem;
+    outline: none; }
+  .btns .go-artical-btn {
+    background: #f35d02;
+    border: 1px solid #e35109;
+    color: #fff; }
+  .btns .down-btn {
+    margin-left: 0.4rem;
+    background: #fff; }
+
+.intro {
+  margin: 0.4rem;
+  box-sizing: border-box;
+  font-size: 0.32rem;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  text-indent: 2em; }
+
+.go-chapter-btn {
+  width: 100%;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+  border-top: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  color: #555; }
